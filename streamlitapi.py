@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 
-model= pickle.load(open('clustering.pkl','rb'))
+model = pickle.load(open('clustering.pkl','rb'))
 
 def main():
     st.title('Credit Card Segmentation Prediction')
@@ -27,8 +27,8 @@ def main():
 
 
     #result[0]ion code
-    if st.button('result[0]'):
-        result = model.result[0]([[BALANCE, BALANCE_FREQUENCY, PURCHASES, ONEOFF_PURCHASES, 
+    if st.button('Predict'):
+        result = model.predict([[BALANCE, BALANCE_FREQUENCY, PURCHASES, ONEOFF_PURCHASES, 
                                         INSTALLMENTS_PURCHASES, CASH_ADVANCE, PURCHASES_FREQUENCY,
                                         ONEOFF_PURCHASES_FREQUENCY, PURCHASES_INSTALLMENTS_FREQUENCY, 
                                         CASH_ADVANCE_FREQUENCY, CASH_ADVANCE_TRX, PURCHASES_TRX, CREDIT_LIMIT, 
