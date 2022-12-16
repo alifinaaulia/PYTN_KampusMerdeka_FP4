@@ -4,7 +4,7 @@ import streamlit as st
 model= pickle.load(open('clustering.pkl','rb'))
 
 def main():
-    st.title('Credit Card Segmentation result[0]ion')
+    st.title('Credit Card Segmentation Prediction')
 
     #input variables
     BALANCE = st.text_input('Balance')
